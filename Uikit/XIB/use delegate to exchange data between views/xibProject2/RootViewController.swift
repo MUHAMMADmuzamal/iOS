@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController, ThirdViewControllerDelegate {
 
     @IBOutlet weak var username:UITextField!
     @IBOutlet weak var email:UITextField!
@@ -28,6 +28,7 @@ class RootViewController: UIViewController {
             data.append(formValue)
             let secondViewController = SecondViewController(nibName: "SecondViewController", bundle: nil)
             secondViewController.items = data
+            secondViewController.delegate = self
             self.navigationController?.pushViewController(secondViewController, animated: true)
         }else{
             let alert = UIAlertController(title: "Alert", message: "User already exists", preferredStyle: .alert)
@@ -41,6 +42,7 @@ class RootViewController: UIViewController {
 //        thirdViewController.items = data
        let thirdViewController = ThirdViewController()
         thirdViewController.items = data
+        thirdViewController.delegate = self
         self.navigationController?.pushViewController(thirdViewController, animated: true)
     }
     func find(findData:FormModel) -> Bool {
@@ -50,5 +52,13 @@ class RootViewController: UIViewController {
             }
         }
         return false
+    }
+}
+
+
+extension RootViewController: SecondViewControllerDelegate{
+    func getData(data: FormModel) {
+        username.text = data.username
+        email.text  = data.email
     }
 }

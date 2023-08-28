@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol SecondViewControllerDelegate{
+    func getData(data: FormModel)
+}
 class SecondViewController: UIViewController {
     var items:[FormModel] = []
+    var delegate:SecondViewControllerDelegate?
     @IBOutlet weak var table:UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ){
+        delegate?.getData(data: items[indexPath.row])
         navigationController?.popToRootViewController(animated: true)
     }
 }

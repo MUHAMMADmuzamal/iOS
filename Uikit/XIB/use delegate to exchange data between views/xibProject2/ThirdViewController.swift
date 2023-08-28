@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol ThirdViewControllerDelegate{
+    func getData(data:FormModel)
+}
 class ThirdViewController: UIViewController {
     @IBOutlet weak var collectionView:UICollectionView!
     var items:[FormModel] = []
+    var delegate:ThirdViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -44,6 +48,7 @@ extension ThirdViewController: UICollectionViewDelegate, UICollectionViewDataSou
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ){
+        delegate?.getData(data: items[indexPath.row])
         navigationController?.popToRootViewController(animated: true)
     }
 }
