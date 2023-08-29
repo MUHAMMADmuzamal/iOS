@@ -12,6 +12,7 @@
 		D6F1BC862A9A209C004A2DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F1BC852A9A209C004A2DDC /* Assets.xcassets */; };
 		D6F1BC892A9A209C004A2DDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F1BC882A9A209C004A2DDC /* Preview Assets.xcassets */; };
 		D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC902A9B46C3004A2DDC /* Box.swift */; };
+		D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		D6F1BC852A9A209C004A2DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6F1BC882A9A209C004A2DDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6F1BC902A9B46C3004A2DDC /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				D6F1BC8F2A9B46A2004A2DDC /* Components */,
 				D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */,
 				D6F1BC832A9A209A004A2DDC /* ContentView.swift */,
+				D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */,
 				D6F1BC852A9A209C004A2DDC /* Assets.xcassets */,
 				D6F1BC872A9A209C004A2DDC /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */,
 				D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */,
 				D6F1BC842A9A209A004A2DDC /* ContentView.swift in Sources */,
 				D6F1BC822A9A209A004A2DDC /* TicTacToeApp.swift in Sources */,

@@ -31,7 +31,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .background(Color.blue)
+            .background(Color.red)
             .frame(width: width, height: height, alignment: .center)
             Text("Count: \(count)")
         }
