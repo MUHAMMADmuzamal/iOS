@@ -9,13 +9,6 @@ import UIKit
 @IBDesignable
 class VerticalDashLine: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     required init?(coder aDecoder: NSCoder) {
          super.init(coder: aDecoder)
         self.configureView()
@@ -25,17 +18,19 @@ class VerticalDashLine: UIView {
          super.init(frame: frame)
          self.configureView()
      }
-    
+    override func draw(_ rect: CGRect) {
+        self.configureView()
+    }
     func configureView() {
-        guard let view = loadViewFromNib(nibName: "VerticalDashLine") else{return}
-        view.frame = self.bounds
-        self.addSubview(view)
-        drawDottedLine(start: CGPoint(x: self.bounds.minX, y: self.bounds.minY), end: CGPoint(x: self.bounds.maxX, y: self.bounds.minY), view: self)
+//        guard let view = loadViewFromNib(nibName: "VerticalDashLine") else{return}
+//        view.frame = self.bounds
+        //self.addSubview(view)
+        drawDottedLine(start: CGPoint(x: self.bounds.minX, y: self.bounds.minY), end: CGPoint(x: self.bounds.minX, y: self.bounds.maxY ), view: self)
 
     }
     func drawDottedLine(start p0: CGPoint, end p1: CGPoint, view: UIView) {
         let shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer.strokeColor = UIColor(hex: "#C4C4C4", alpha: 1.0).cgColor
         shapeLayer.lineWidth = 1
         shapeLayer.lineDashPattern = [7, 3] // 7 is the length of dash, 3 is length of the gap.
 
