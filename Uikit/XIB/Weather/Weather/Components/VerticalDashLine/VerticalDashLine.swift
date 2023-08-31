@@ -21,6 +21,9 @@ class VerticalDashLine: UIView {
     override func draw(_ rect: CGRect) {
         self.configureView()
     }
+    override func prepareForInterfaceBuilder(){
+        self.configureView()
+    }
     func configureView() {
 //        guard let view = loadViewFromNib(nibName: "VerticalDashLine") else{return}
 //        view.frame = self.bounds

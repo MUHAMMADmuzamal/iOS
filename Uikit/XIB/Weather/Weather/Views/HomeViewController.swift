@@ -26,25 +26,30 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.setup()
+        
+    }
+
+    override func prepareForInterfaceBuilder(){
+        self.setup()
+    }
+    func setup() {
         stackView.setCustomSpacing(17,after: searchBarView )
         stackView.setCustomSpacing(41,after: dotsStackView )
         stackView.setCustomSpacing(10,after: weatherImage )
         stackView.setCustomSpacing(16,after: locationLabelStackView )
         stackView.setCustomSpacing(35, after: temperatureView)
         stackView.setCustomSpacing(11, after: detailUIView)
-        
+
         //detailUIView settings
         detailUIView.layer.cornerRadius = 11.0
-        
+
         //sunSetDetailView setting
         sunSetDetailView.layer.cornerRadius = 11.0
         sunSetDetailStackView.setCustomSpacing(32, after: sunSetLabel)
         sunSetDetailStackView.setCustomSpacing(16, after: sunSetAngleView)
         sunSetDetailStackView.setCustomSpacing(4, after: remainingDayLightStack)
-        
     }
-
-
     /*
     // MARK: - Navigation
 

@@ -42,7 +42,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a3q-uP-35G">
+                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a3q-uP-35G" userLabel="Main Stack View">
                     <rect key="frame" x="0.0" y="60" width="393" height="722"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4I-nV-iuw" customClass="SearchBarView" customModule="Weather" customModuleProvider="target">
@@ -52,7 +52,7 @@
                                 <constraint firstAttribute="height" constant="44" id="JCj-kE-r8d"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Llp-tr-cdh">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Llp-tr-cdh" userLabel="Dots">
                             <rect key="frame" x="182.66666666666666" y="44" width="28" height="8"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CAf-9m-Rdt">
@@ -88,7 +88,7 @@
                                 <constraint firstAttribute="height" constant="123" id="T80-UF-399"/>
                             </constraints>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="S0I-ww-P2d">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="S0I-ww-P2d" userLabel="Location">
                             <rect key="frame" x="97.333333333333329" y="175" width="198.33333333333337" height="41.666666666666657"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Islamabad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-7M-aMn">
@@ -108,7 +108,7 @@
                                 </imageView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-uf-Ei9">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-uf-Ei9" userLabel="Temperature">
                             <rect key="frame" x="150.33333333333334" y="216.66666666666669" width="92.333333333333343" height="70"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-m7-Wwd">
@@ -130,11 +130,11 @@
                             </subviews>
                             <color key="tintColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-qd-hY1">
-                            <rect key="frame" x="20" y="286.66666666666669" width="353" height="68.333333333333314"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-qd-hY1" userLabel="Weather Detail">
+                            <rect key="frame" x="20" y="286.66666666666669" width="353" height="60"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ezf-EB-QxP">
-                                    <rect key="frame" x="34" y="14.666666666666629" width="285.33333333333331" height="39"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ezf-EB-QxP" userLabel="Horizontal Stack View Weather Detail">
+                                    <rect key="frame" x="34" y="13.666666666666629" width="285.33333333333331" height="39"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ye2-vf-mmm">
                                             <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="39"/>
@@ -154,7 +154,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LmW-Hn-95P">
-                                            <rect key="frame" x="111.33333333333334" y="0.66666666666668561" width="16.666666666666657" height="38"/>
+                                            <rect key="frame" x="111.33333333333334" y="0.66666666666662877" width="16.666666666666657" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="UV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4X-nF-GlZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="16.666666666666668" height="17"/>
@@ -188,7 +188,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mm0-A4-R2g">
-                                            <rect key="frame" x="267.33333333333331" y="0.66666666666668561" width="18" height="38"/>
+                                            <rect key="frame" x="267.33333333333331" y="0.66666666666662877" width="18" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-2b-2xK">
                                                     <rect key="frame" x="0.0" y="0.0" width="18" height="17"/>
@@ -210,15 +210,14 @@
                             <color key="backgroundColor" red="0.99215686270000003" green="0.98823529409999999" blue="0.98823529409999999" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" systemColor="tintColor"/>
                             <constraints>
-                                <constraint firstItem="ezf-EB-QxP" firstAttribute="centerY" secondItem="zPu-qd-hY1" secondAttribute="centerY" id="2jp-Dq-gE7"/>
-                                <constraint firstItem="ezf-EB-QxP" firstAttribute="centerX" secondItem="zPu-qd-hY1" secondAttribute="centerX" id="VVt-QD-3GC"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="61" id="kDC-xr-6RB"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIK-ql-UUe">
-                            <rect key="frame" x="20" y="355" width="353" height="367"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIK-ql-UUe" userLabel="SunRise/SunSet">
+                            <rect key="frame" x="20" y="346.66666666666674" width="353" height="375.33333333333326"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QcW-lE-Mhe">
-                                    <rect key="frame" x="20" y="20" width="313" height="215"/>
+                                    <rect key="frame" x="20" y="20" width="313" height="229"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUNRISE &amp; SUNSET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpE-YP-9c9">
                                             <rect key="frame" x="0.0" y="0.0" width="149.66666666666666" height="18"/>
@@ -230,7 +229,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-J9-GUj">
-                                            <rect key="frame" x="0.0" y="18" width="313" height="167"/>
+                                            <rect key="frame" x="0.0" y="18" width="313" height="181"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-Ud-hOf">
                                                     <rect key="frame" x="31" y="32" width="56" height="31"/>
@@ -267,26 +266,26 @@
                                                     </subviews>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-gI-fmj" customClass="SunRiseAndSunSetArc" customModule="Weather" customModuleProvider="target">
-                                                    <rect key="frame" x="25" y="64.333333333333371" width="193" height="35"/>
+                                                    <rect key="frame" x="25" y="64.333333333333314" width="193" height="49"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0Z-oh-a0v">
-                                                    <rect key="frame" x="8" y="58" width="297" height="49"/>
+                                                    <rect key="frame" x="8" y="58" width="297" height="63"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7T-ad-to0" customClass="HorizontalDashLine" customModule="Weather" customModuleProvider="target">
-                                                            <rect key="frame" x="6" y="56" width="300" height="0.0"/>
+                                                            <rect key="frame" x="6" y="56.000000000000057" width="300" height="14"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3GQ-j3-3FT" customClass="VerticalDashLine" customModule="Weather" customModuleProvider="target">
-                                                            <rect key="frame" x="50" y="8" width="5" height="40"/>
+                                                            <rect key="frame" x="50" y="8.0000000000000568" width="5" height="54"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7B-1X-ytl" customClass="VerticalDashLine" customModule="Weather" customModuleProvider="target">
-                                                            <rect key="frame" x="245" y="8" width="5" height="40"/>
+                                                            <rect key="frame" x="245" y="8.0000000000000568" width="5" height="54"/>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOt-C8-0dr">
-                                                            <rect key="frame" x="264" y="23" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horizon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOt-C8-0dr">
+                                                            <rect key="frame" x="264" y="23" width="37" height="14"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                            <color key="textColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -324,7 +323,7 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2I-ed-uuC">
-                                            <rect key="frame" x="0.0" y="185" width="106.66666666666667" height="15"/>
+                                            <rect key="frame" x="0.0" y="198.99999999999994" width="106.66666666666667" height="15"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length of day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-r5-dKk">
                                                     <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="15"/>
@@ -344,7 +343,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-AT-4Il">
-                                            <rect key="frame" x="0.0" y="200" width="135.66666666666666" height="15"/>
+                                            <rect key="frame" x="0.0" y="213.99999999999994" width="135.66666666666666" height="15"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining daylight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-io-BlR">
                                                     <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="15"/>
@@ -370,7 +369,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="zaL-J9-GUj" secondAttribute="trailing" id="7qB-cN-mkG"/>
-                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="229" id="L5H-5G-fXe"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
@@ -402,7 +400,7 @@
                 <constraint firstItem="a3q-uP-35G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ip8-XJ-ZWP"/>
                 <constraint firstItem="a3q-uP-35G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="wAx-rl-tfS"/>
             </constraints>
-            <point key="canvasLocation" x="12.55813953488372" y="20.600858369098713"/>
+            <point key="canvasLocation" x="11.450381679389313" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

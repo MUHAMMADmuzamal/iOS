@@ -23,6 +23,9 @@ class SunRiseAndSunSetArc: UIView {
         self.setup()
     }
     
+    override func prepareForInterfaceBuilder(){
+        self.setup()
+    }
     func setup() {
         
         // Create a CAShapeLayer

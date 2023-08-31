@@ -28,6 +28,9 @@ class SearchBarView: UIView , UITextFieldDelegate{
         
         setupView()
      }
+    override func prepareForInterfaceBuilder(){
+        self.setupView()
+    }
     
     func setupView() {
         searchBar.layer.borderColor = UIColor.black.cgColor
