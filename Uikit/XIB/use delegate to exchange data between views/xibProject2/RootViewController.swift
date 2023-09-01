@@ -17,10 +17,7 @@ class RootViewController: UIViewController, ThirdViewControllerDelegate {
 
         // Do any additional setup after loading the view.
     }
-//    override func viewWillAppear(_ animated: Bool){
-//        super.viewWillAppear(animated)
-//
-//    }
+
     @IBAction func addToList(_ sender:Any){
         let formValue:FormModel = FormModel(username: username.text!, email: email.text!)
         
