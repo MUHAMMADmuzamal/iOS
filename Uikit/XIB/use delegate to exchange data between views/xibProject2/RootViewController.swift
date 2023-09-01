@@ -40,10 +40,15 @@ class RootViewController: UIViewController, ThirdViewControllerDelegate {
     @IBAction func showCollectionView(_ sender: Any){
 //        let thirdViewController = ThirdViewController(nibName: "ThirdViewController", bundle: nil)
 //        thirdViewController.items = data
-       let thirdViewController = ThirdViewController()
-        thirdViewController.items = data
-        thirdViewController.delegate = self
-        self.navigationController?.pushViewController(thirdViewController, animated: true)
+        
+        
+//       let thirdViewController = ThirdViewController()
+//        thirdViewController.items = data
+//        thirdViewController.delegate = self
+//        self.navigationController?.pushViewController(thirdViewController, animated: true)
+        let tb = TableViewController()
+        
+        self.navigationController?.pushViewController(tb, animated: true)
     }
     func find(findData:FormModel) -> Bool {
         for value in self.data{
