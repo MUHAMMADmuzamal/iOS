@@ -14,6 +14,13 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var collectionView:UICollectionView!
     var items:[FormModel] = []
     var delegate:ThirdViewControllerDelegate?
+    let flowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        return layout
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
@@ -23,7 +30,7 @@ class ThirdViewController: UIViewController {
     }
 }
 
-extension ThirdViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+extension ThirdViewController: UICollectionViewDataSource{
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
@@ -43,7 +50,10 @@ extension ThirdViewController: UICollectionViewDelegate, UICollectionViewDataSou
         }
         return UICollectionViewCell()
     }
-    
+}
+
+
+extension ThirdViewController: UICollectionViewDelegate{
     func collectionView(
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
@@ -53,4 +63,19 @@ extension ThirdViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 
-
+extension ThirdViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+         let width = collectionView.bounds.width
+         let numberOfItemsPerRow: CGFloat = 3
+         let spacing: CGFloat = flowLayout.minimumInteritemSpacing
+         let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
+         let itemDimension = floor(availableWidth / numberOfItemsPerRow)
+         return CGSize(width: itemDimension, height: itemDimension)
+     }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
+}

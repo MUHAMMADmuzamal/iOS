@@ -23,7 +23,7 @@ class SecondViewController: UIViewController {
     }
 }
 
-extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
+extension SecondViewController: UITableViewDataSource{
     
     
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +38,9 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
          }
          return UITableViewCell()
     }
+}
+
+extension SecondViewController:UITableViewDelegate{
     func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
