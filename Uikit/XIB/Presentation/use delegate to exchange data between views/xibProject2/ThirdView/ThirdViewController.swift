@@ -75,7 +75,9 @@ extension ThirdViewController: UICollectionViewDelegateFlowLayout{
          let width = collectionView.bounds.width
          let numberOfItemsPerRow: CGFloat = 3
          let spacing: CGFloat = flowLayout.minimumInteritemSpacing
-         let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
+         let availableWidth = width - spacing * numberOfItemsPerRow
+        print(availableWidth)
+        print(width)
          let itemDimension = floor(availableWidth / numberOfItemsPerRow)
          return CGSize(width: itemDimension, height: itemDimension)
      }

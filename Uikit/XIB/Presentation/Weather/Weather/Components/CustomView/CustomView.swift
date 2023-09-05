@@ -25,7 +25,7 @@ class CustomView: UIView {
                     view.frame = bounds
                    view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-                    addSubview(view)
+        self.addSubview(view)
     }
     // MARK: all configureView Function work great. only add class to onwer of viewfile and add class to where this component called.
 //    func configureView() {

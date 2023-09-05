@@ -11,6 +11,7 @@ protocol SecondViewControllerDelegate{
     func getData(data: FormModel)
 }
 class SecondViewController: UIViewController {
+    
     var items:[FormModel] = []
     var delegate:SecondViewControllerDelegate?
     @IBOutlet weak var table:UITableView!
@@ -34,8 +35,10 @@ extension SecondViewController: UITableViewDataSource{
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell{
+             
              let item:FormModel = items[indexPath.row]
              cell.label?.text = "\(String(describing: item.username!)), \(String(describing: item.email!))"
+             
              return cell
          }
          return UITableViewCell()

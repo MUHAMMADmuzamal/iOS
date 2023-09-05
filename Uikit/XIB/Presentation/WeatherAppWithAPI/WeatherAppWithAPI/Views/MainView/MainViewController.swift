@@ -12,34 +12,70 @@ class MainViewController: UIViewController {
     @IBOutlet weak var latitude:UITextField!
     @IBOutlet weak var longitude:UITextField!
     @IBOutlet weak var temperatureLabel:UILabel!
+    @IBOutlet weak var buttonUIView:UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingView: UIView! {
+      didSet {
+        loadingView.layer.cornerRadius = 6
+      }
+    }
+
     
     let weatherViewModel = WeatherViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.weatherViewModel.delegate =  self
+        self.buttonUIView.layer.cornerRadius = 5.0
+        self.buttonUIView.clipsToBounds = true
+        self.hideSpinner()
     }
 
-
-    @IBAction func fetchData(_ sender: Any){
-        weatherViewModel.fetchWeatherData(latitude: latitude.text ??  "33.7215", longitude: longitude.text ?? "73.0433"){ [self]
-            (data:WeatherModel) in
-            print("\(data.daily.temperature2MMax)")
-            self.temperatureLabel?.text = "\(data.daily.temperature2MMax[0])"
-        }onFailureHandler:{
-            (error) in
-            print(error)
-        }
-
+    //MARK: - Weather API Call
+    @IBAction func fetchWeather(_ sender: Any){
+        weatherViewModel.fetchWeatherData(latitude: self.latitude.text ?? "33.7215", longitude: self.longitude.text ?? "73.0433")
+        self.showSpinner()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Products API Call
+    @IBAction func getProducts(_ sender: Any){
+        self.navigationController?.pushViewController(ProductsView(), animated: true)
     }
-    */
+    
+   
+    //MARK: - Spinner Functions
+    private func showSpinner() {
+        activityIndicator.startAnimating()
+        loadingView.isHidden = false
+    }
 
+    private func hideSpinner() {
+        activityIndicator.stopAnimating()
+        loadingView.isHidden = true
+    }
+    
 }
+
+//MARK: - Weather Delegate
+
+extension MainViewController: WeatherViewModelDelegate{
+    func success(data: WeatherModel) {
+        self.temperatureLabel?.text = "\(data.daily.temperature2MMax[0])"
+        self.hideSpinner()
+    }
+    
+    func failure(error:Error) {
+        print(error)
+        self.hideSpinner()
+    }
+}
+
+
+
+
+//        weatherViewModel.fetchWeatherData(latitude: latitude.text ??  "33.7215", longitude: longitude.text ?? "73.0433"){ [self]
+//            (data:WeatherModel) in
+//            print("\(data.daily.temperature2MMax)")
+//            self.temperatureLabel?.text = "\(data.daily.temperature2MMax[0])"
+//        }onFailureHandler:{
+//            (error) in
+//            print(error)
+//        }
