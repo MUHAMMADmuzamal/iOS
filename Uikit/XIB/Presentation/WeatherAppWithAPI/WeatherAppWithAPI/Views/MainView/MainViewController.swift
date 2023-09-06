@@ -32,7 +32,13 @@ class MainViewController: UIViewController {
 
     //MARK: - Weather API Call
     @IBAction func fetchWeather(_ sender: Any){
-        weatherViewModel.fetchWeatherData(latitude: self.latitude.text ?? "33.7215", longitude: self.longitude.text ?? "73.0433")
+        guard latitude?.text != "" && longitude?.text != "" else{
+            let alert = UIAlertController(title: "Alert", message: "fill all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title:"OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        weatherViewModel.fetchWeatherData(latitude: self.latitude.text!, longitude: self.longitude.text!)
         self.showSpinner()
     }
     //MARK: - Products API Call
