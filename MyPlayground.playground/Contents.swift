@@ -1,5 +1,5 @@
 import Cocoa
-
+/*
 var greeting = "Hello, playground"
 
 var optionalValue:Int? = 100
@@ -147,5 +147,23 @@ var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
 print(paragraph!.asHTML())
 
 paragraph = nil
+*/
+var seconds = 1.0
+func  getData() async -> String{
+    do{
+        try await Task.sleep(nanoseconds: 1 * 1_000_000_000)
+    }catch{
+        print("Error")
+    }
+    return "add download ready for use"
+}
 
+print("woking on code line 1")
+
+print("still working on code line 100")
+Task{
+    let str  = await getData()
+}
+
+print("working on code")
 
