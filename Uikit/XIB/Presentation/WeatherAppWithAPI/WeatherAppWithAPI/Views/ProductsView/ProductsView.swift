@@ -64,7 +64,10 @@ extension ProductsView: UITableViewDelegate{
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ){
-        print("row seletecd \(indexPath.row)")
+        let productDetailView = ProductDetailView()
+        productDetailView.product = productsList[indexPath.row]
+        self.navigationController?.pushViewController(productDetailView, animated: true)
+        
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let row = indexPath.row + 1

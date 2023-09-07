@@ -16,6 +16,8 @@
 		D617F8612AA72C4B002F7193 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F8602AA72C4B002F7193 /* ProductViewModel.swift */; };
 		D617F8642AA73709002F7193 /* ProductsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F8622AA73709002F7193 /* ProductsTableCell.swift */; };
 		D617F8652AA73709002F7193 /* ProductsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D617F8632AA73709002F7193 /* ProductsTableCell.xib */; };
+		D617F8692AA841AA002F7193 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F8672AA841AA002F7193 /* ProductDetailView.swift */; };
+		D617F86A2AA841AA002F7193 /* ProductDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D617F8682AA841AA002F7193 /* ProductDetailView.xib */; };
 		D6B2EF022AA5C7FB001A5C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2EF012AA5C7FB001A5C44 /* AppDelegate.swift */; };
 		D6B2EF042AA5C7FB001A5C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2EF032AA5C7FB001A5C44 /* SceneDelegate.swift */; };
 		D6B2EF0B2AA5C7FE001A5C44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B2EF0A2AA5C7FE001A5C44 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		D617F8602AA72C4B002F7193 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		D617F8622AA73709002F7193 /* ProductsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableCell.swift; sourceTree = "<group>"; };
 		D617F8632AA73709002F7193 /* ProductsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsTableCell.xib; sourceTree = "<group>"; };
+		D617F8672AA841AA002F7193 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		D617F8682AA841AA002F7193 /* ProductDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailView.xib; sourceTree = "<group>"; };
 		D6B2EEFE2AA5C7FB001A5C44 /* WeatherAppWithAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppWithAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B2EF012AA5C7FB001A5C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B2EF032AA5C7FB001A5C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 			path = ProductsView;
 			sourceTree = "<group>";
 		};
+		D617F8662AA84185002F7193 /* ProductDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				D617F8672AA841AA002F7193 /* ProductDetailView.swift */,
+				D617F8682AA841AA002F7193 /* ProductDetailView.xib */,
+			);
+			path = ProductDetailView;
+			sourceTree = "<group>";
+		};
 		D6B2EEF52AA5C7FB001A5C44 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +145,7 @@
 		D6B2EF152AA5C87D001A5C44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D617F8662AA84185002F7193 /* ProductDetailView */,
 				D617F85B2AA7188A002F7193 /* ProductsView */,
 				D6B2EF162AA5C886001A5C44 /* MainView */,
 			);
@@ -218,6 +232,7 @@
 				D617F85F2AA718F8002F7193 /* ProductsView.xib in Resources */,
 				D6B2EF0E2AA5C7FE001A5C44 /* LaunchScreen.storyboard in Resources */,
 				D6B2EF0B2AA5C7FE001A5C44 /* Assets.xcassets in Resources */,
+				D617F86A2AA841AA002F7193 /* ProductDetailView.xib in Resources */,
 				D617F8652AA73709002F7193 /* ProductsTableCell.xib in Resources */,
 				D6FE66912AA5CDB7000E2C17 /* MainViewController.xib in Resources */,
 			);
@@ -273,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D617F85E2AA718F8002F7193 /* ProductsView.swift in Sources */,
+				D617F8692AA841AA002F7193 /* ProductDetailView.swift in Sources */,
 				D617F84E2AA5EF03002F7193 /* WeatherViewModel.swift in Sources */,
 				D617F85A2AA7183D002F7193 /* ProductsModel.swift in Sources */,
 				D6B2EF022AA5C7FB001A5C44 /* AppDelegate.swift in Sources */,

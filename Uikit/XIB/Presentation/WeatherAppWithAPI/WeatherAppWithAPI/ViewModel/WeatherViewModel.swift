@@ -16,6 +16,7 @@ protocol WeatherViewModelDelegate{
 class WeatherViewModel{
     
     private var url = "https://api.open-meteo.com/v1/forecast?daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=auto"
+    
     var delegate: WeatherViewModelDelegate?
     
     func fetchWeatherData(latitude: String,

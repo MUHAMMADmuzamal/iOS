@@ -162,10 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D655A7E52A9DB53400C23C4C /* fonts */,
-				D6DC7B712A9CA4BC007A9984 /* ViewModel */,
 				D6DC7B6A2A9CA21D007A9984 /* Components */,
-				D6DC7B692A9CA1F2007A9984 /* Utilities */,
-				D6DC7B672A9CA1A9007A9984 /* Model */,
 				D6DC7B662A9CA19C007A9984 /* Views */,
 				D6DC7B522A9CA184007A9984 /* AppDelegate.swift */,
 				D6DC7B542A9CA184007A9984 /* SceneDelegate.swift */,
@@ -185,20 +182,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D6DC7B672A9CA1A9007A9984 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D6DC7B692A9CA1F2007A9984 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		D6DC7B6A2A9CA21D007A9984 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,13 +192,6 @@
 				D6FA124B2A9CCD77002C35EB /* SearchBar */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		D6DC7B712A9CA4BC007A9984 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D6FA124B2A9CCD77002C35EB /* SearchBar */ = {

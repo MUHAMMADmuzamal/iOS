@@ -27,7 +27,22 @@ class CustomView: UIView {
         
         self.addSubview(view)
     }
-    // MARK: all configureView Function work great. only add class to onwer of viewfile and add class to where this component called.
+}
+
+extension UIView{
+    func loadViewFromNib(nibName: String) -> UIView? {
+        let bundle = Bundle(for: type(of: self))
+        let nib  = UINib(nibName: nibName, bundle: bundle)
+        return nib.instantiate(withOwner: self).first as? UIView
+    }
+}
+
+
+
+
+
+
+// MARK: all configureView Function work great. only add class to onwer of viewfile and add class to where this component called.
 //    func configureView() {
 //        let bundle = Bundle.init(for: CustomView.self)
 //        if let viewToAdd = bundle.loadNibNamed("CustomView", owner: self),
@@ -50,13 +65,3 @@ class CustomView: UIView {
 //            addSubview(view)
 //
 //        }
-}
-
-extension UIView{
-    func loadViewFromNib(nibName: String) -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let nib  = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self).first as? UIView
-    }
-}
-

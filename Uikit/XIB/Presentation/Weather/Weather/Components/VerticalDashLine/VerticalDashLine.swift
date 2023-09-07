@@ -21,13 +21,8 @@ class VerticalDashLine: UIView {
     override func draw(_ rect: CGRect) {
         self.configureView()
     }
-    override func prepareForInterfaceBuilder(){
-        self.configureView()
-    }
+    
     func configureView() {
-//        guard let view = loadViewFromNib(nibName: "VerticalDashLine") else{return}
-//        view.frame = self.bounds
-        //self.addSubview(view)
         drawDottedLine(start: CGPoint(x: self.bounds.minX, y: self.bounds.minY), end: CGPoint(x: self.bounds.minX, y: self.bounds.maxY ), view: self)
 
     }

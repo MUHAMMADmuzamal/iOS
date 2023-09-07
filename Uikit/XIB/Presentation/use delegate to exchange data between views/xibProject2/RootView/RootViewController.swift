@@ -22,7 +22,7 @@ class RootViewController: UIViewController, ThirdViewControllerDelegate {
     @IBAction func addToList(_ sender:Any){
         let formValue:FormModel = FormModel(username: username.text!, email: email.text!)
         
-        if !find(findData: formValue){
+        if find(findData: formValue) == false{
             data.append(formValue)
             let secondViewController = SecondViewController()
             secondViewController.items = data

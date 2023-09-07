@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F86B2AA9CCBC002F7193 /* SettingsView.swift */; };
 		D6F1BC822A9A209A004A2DDC /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */; };
 		D6F1BC842A9A209A004A2DDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC832A9A209A004A2DDC /* ContentView.swift */; };
 		D6F1BC862A9A209C004A2DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F1BC852A9A209C004A2DDC /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D617F86B2AA9CCBC002F7193 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D6F1BC7E2A9A209A004A2DDC /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeApp.swift; sourceTree = "<group>"; };
 		D6F1BC832A9A209A004A2DDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */,
 				D6F1BC852A9A209C004A2DDC /* Assets.xcassets */,
 				D6F1BC872A9A209C004A2DDC /* Preview Content */,
+				D617F86B2AA9CCBC002F7193 /* SettingsView.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */,
 				D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */,
 				D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */,
 				D6F1BC842A9A209A004A2DDC /* ContentView.swift in Sources */,

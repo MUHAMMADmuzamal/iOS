@@ -11,6 +11,7 @@ protocol ThirdViewControllerDelegate{
     func getData(data:FormModel)
 }
 class ThirdViewController: UIViewController {
+    
     @IBOutlet weak var collectionView:UICollectionView!
     var items:[FormModel] = []
     var delegate:ThirdViewControllerDelegate?
@@ -28,7 +29,6 @@ class ThirdViewController: UIViewController {
         self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         self.collectionView.dataSource = self
         self.collectionView.delegate = self        
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -76,16 +76,22 @@ extension ThirdViewController: UICollectionViewDelegateFlowLayout{
          let numberOfItemsPerRow: CGFloat = 3
          let spacing: CGFloat = flowLayout.minimumInteritemSpacing
          let availableWidth = width - spacing * numberOfItemsPerRow
-        print(availableWidth)
-        print(width)
          let itemDimension = floor(availableWidth / numberOfItemsPerRow)
          return CGSize(width: itemDimension, height: itemDimension)
      }
-    
+}
+
+
+
+
+
+
+
+//extension ThirdViewController: UICollectionViewDelegateFlowLayout{
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 0
 //    }
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 0
 //    }
-}
+//}
