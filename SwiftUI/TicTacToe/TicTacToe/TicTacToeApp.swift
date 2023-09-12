@@ -13,10 +13,11 @@ struct TicTacToeApp: App {
 #if os(iOS)
         WindowGroup {
             TabView {
-                ContentView()
-                    .tabItem {
-                        Label("Journal", systemImage: "book")
-                    }
+//                ContentView()
+//                    .tabItem {
+//                        Label("Journal", systemImage: "book")
+//                    }
+                TextBootcamp()
                 
                 SettingsView()
                     .tabItem {

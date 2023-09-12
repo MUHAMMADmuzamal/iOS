@@ -22,16 +22,16 @@ class RootViewController: UIViewController, ThirdViewControllerDelegate {
     @IBAction func addToList(_ sender:Any){
         let formValue:FormModel = FormModel(username: username.text!, email: email.text!)
         
-        if find(findData: formValue) == false{
+        if find(findData: formValue) == true{
+            let alert = UIAlertController(title: "Alert", message: "User already exists", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title:"OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }else{
             data.append(formValue)
             let secondViewController = SecondViewController()
             secondViewController.items = data
             secondViewController.delegate = self
             self.navigationController?.pushViewController(secondViewController, animated: true)
-        }else{
-            let alert = UIAlertController(title: "Alert", message: "User already exists", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title:"OK", style: .default))
-            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -45,12 +45,16 @@ class RootViewController: UIViewController, ThirdViewControllerDelegate {
     }
     
     func find(findData:FormModel) -> Bool {
-        for value in self.data{
-            if value.username ==  findData.username || value.email == findData.email{
-                return true
-            }
+        
+        guard self.data.contains(where:{ (element) in
+           return  (element.username == findData.username ||
+                    element.email == findData.email) ?
+                                                        true:
+                                                        false
+        })else{
+            return false
         }
-        return false
+        return true
     }
 }
 

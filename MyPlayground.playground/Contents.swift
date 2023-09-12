@@ -167,3 +167,19 @@ Task{
 
 print("working on code")
 
+var hex = 0xFF
+
+hex = hex >> 1
+hex = hex >> 1
+
+let red = CGFloat((0xFF4034 & 0xFF0000) >> 16) / 255.0
+
+
+var phrase = "The rain in Spain stays mainly in the plain."
+
+
+let vowels: Set<Character> = ["a", "e", "i", "o", "u"]
+phrase.removeAll(where: {
+    print($0)
+    return vowels.contains($0) })
+

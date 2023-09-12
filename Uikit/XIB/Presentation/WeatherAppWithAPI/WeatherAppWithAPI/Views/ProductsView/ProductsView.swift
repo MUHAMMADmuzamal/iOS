@@ -71,6 +71,8 @@ extension ProductsView: UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let row = indexPath.row + 1
+        // if list is empty then return because we make api call already.
+        // if list is not empty then check for other conditions.
         guard !productsList.isEmpty else { return }
         if productsList.count > row {
             return
