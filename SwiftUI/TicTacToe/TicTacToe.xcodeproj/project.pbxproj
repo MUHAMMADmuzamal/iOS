@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F86B2AA9CCBC002F7193 /* SettingsView.swift */; };
+		D6A903152AB21918003AABC7 /* ColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A903142AB21918003AABC7 /* ColorBootcamp.swift */; };
 		D6BE123B2AAF880E00F18DDF /* TextBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */; };
 		D6C977C72AB0C64000830A99 /* ShapeBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */; };
 		D6F1BC822A9A209A004A2DDC /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		D617F86B2AA9CCBC002F7193 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D6A903142AB21918003AABC7 /* ColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBootcamp.swift; sourceTree = "<group>"; };
 		D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcamp.swift; sourceTree = "<group>"; };
 		D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeBootcamp.swift; sourceTree = "<group>"; };
 		D6F1BC7E2A9A209A004A2DDC /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +47,6 @@
 		D6F1BC752A9A2099004A2DDC = {
 			isa = PBXGroup;
 			children = (
-				D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */,
 				D6F1BC802A9A209A004A2DDC /* TicTacToe */,
 				D6F1BC7F2A9A209A004A2DDC /* Products */,
 			);
@@ -64,6 +65,8 @@
 			children = (
 				D6F1BC8F2A9B46A2004A2DDC /* Components */,
 				D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */,
+				D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */,
+				D6A903142AB21918003AABC7 /* ColorBootcamp.swift */,
 				D6F1BC832A9A209A004A2DDC /* ContentView.swift */,
 				D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */,
 				D6F1BC852A9A209C004A2DDC /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 			files = (
 				D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */,
 				D6BE123B2AAF880E00F18DDF /* TextBootcamp.swift in Sources */,
+				D6A903152AB21918003AABC7 /* ColorBootcamp.swift in Sources */,
 				D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */,
 				D6C977C72AB0C64000830A99 /* ShapeBootcamp.swift in Sources */,
 				D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */,
