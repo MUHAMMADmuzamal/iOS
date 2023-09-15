@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6025FD82AB3669D00E6AE69 /* GradientsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */; };
 		D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F86B2AA9CCBC002F7193 /* SettingsView.swift */; };
 		D6A903152AB21918003AABC7 /* ColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A903142AB21918003AABC7 /* ColorBootcamp.swift */; };
 		D6BE123B2AAF880E00F18DDF /* TextBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsBootcamp.swift; sourceTree = "<group>"; };
 		D617F86B2AA9CCBC002F7193 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D6A903142AB21918003AABC7 /* ColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBootcamp.swift; sourceTree = "<group>"; };
 		D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcamp.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				D6F1BC872A9A209C004A2DDC /* Preview Content */,
 				D617F86B2AA9CCBC002F7193 /* SettingsView.swift */,
 				D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */,
+				D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */,
 				D6BE123B2AAF880E00F18DDF /* TextBootcamp.swift in Sources */,
 				D6A903152AB21918003AABC7 /* ColorBootcamp.swift in Sources */,
+				D6025FD82AB3669D00E6AE69 /* GradientsBootcamp.swift in Sources */,
 				D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */,
 				D6C977C72AB0C64000830A99 /* ShapeBootcamp.swift in Sources */,
 				D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */,
