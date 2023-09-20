@@ -48,9 +48,7 @@ class RootViewController: UIViewController, ThirdViewControllerDelegate {
         
         guard self.data.contains(where:{ (element) in
            return  (element.username == findData.username ||
-                    element.email == findData.email) ?
-                                                        true:
-                                                        false
+                    element.email == findData.email) ? true: false
         })else{
             return false
         }

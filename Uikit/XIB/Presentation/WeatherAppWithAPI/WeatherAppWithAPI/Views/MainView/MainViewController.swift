@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
 
     
     let weatherViewModel = WeatherViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.weatherViewModel.delegate =  self
