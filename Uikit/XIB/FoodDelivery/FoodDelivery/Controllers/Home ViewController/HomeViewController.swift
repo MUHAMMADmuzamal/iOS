@@ -19,6 +19,9 @@ class HomeViewController: UIViewController{
         self.collectionView.register(UINib(nibName: "FoodCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.identifier)
         self.collectionView.register(UINib(nibName: "RestaurantsListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: RestaurantsListCollectionViewCell.identifier)
         self.collectionView.register(UINib(nibName: "RestaurantVeganCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: RestaurantVeganCollectionViewCell.identifier)
+        //Header Footer
+        collectionView.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
+        
         self.configureCompostionaLayout()
     }
 }

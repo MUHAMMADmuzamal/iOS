@@ -26,6 +26,8 @@
 		D65774F42AB9651A00A91AD6 /* VeganRestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774F32AB9651A00A91AD6 /* VeganRestaurantModel.swift */; };
 		D65774F72AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774F52AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.swift */; };
 		D65774F82AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65774F62AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.xib */; };
+		D65774FE2ABABE2400A91AD6 /* DividerFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774FD2ABABE2400A91AD6 /* DividerFooterView.swift */; };
+		D65775002ABABE5D00A91AD6 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774FF2ABABE5D00A91AD6 /* FilterHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		D65774F32AB9651A00A91AD6 /* VeganRestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganRestaurantModel.swift; sourceTree = "<group>"; };
 		D65774F52AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVeganCollectionViewCell.swift; sourceTree = "<group>"; };
 		D65774F62AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantVeganCollectionViewCell.xib; sourceTree = "<group>"; };
+		D65774FD2ABABE2400A91AD6 /* DividerFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerFooterView.swift; sourceTree = "<group>"; };
+		D65774FF2ABABE5D00A91AD6 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		D657748C2AB4702F00A91AD6 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				D65775012ABAC0F900A91AD6 /* Controllers */,
 				D65774D62AB81E2800A91AD6 /* Views */,
 				D65774D32AB81BD400A91AD6 /* Model */,
 				D657748D2AB4702F00A91AD6 /* AppDelegate.swift */,
@@ -107,7 +112,8 @@
 		D65774D62AB81E2800A91AD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D65774E62AB9585300A91AD6 /* Home ViewController */,
+				D65774FB2ABABDD600A91AD6 /* Header */,
+				D65774D72AB81E3900A91AD6 /* Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,9 +139,25 @@
 				D65774A32AB4715300A91AD6 /* HomeViewController.swift */,
 				D65774E02AB820B000A91AD6 /* HomeVC+Extensions.swift */,
 				D65774A42AB4715300A91AD6 /* HomeViewController.xib */,
-				D65774D72AB81E3900A91AD6 /* Cell */,
 			);
 			path = "Home ViewController";
+			sourceTree = "<group>";
+		};
+		D65774FB2ABABDD600A91AD6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D65774FD2ABABE2400A91AD6 /* DividerFooterView.swift */,
+				D65774FF2ABABE5D00A91AD6 /* FilterHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		D65775012ABAC0F900A91AD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D65774E62AB9585300A91AD6 /* Home ViewController */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,11 +239,13 @@
 				D65774E42AB82BEA00A91AD6 /* FoodTopBannerCollectionViewCell.swift in Sources */,
 				D657748E2AB4702F00A91AD6 /* AppDelegate.swift in Sources */,
 				D65774D52AB81BF700A91AD6 /* FoodTopBannerModel.swift in Sources */,
+				D65774FE2ABABE2400A91AD6 /* DividerFooterView.swift in Sources */,
 				D65774EB2AB95BA400A91AD6 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				D65774902AB4702F00A91AD6 /* SceneDelegate.swift in Sources */,
 				D65774EF2AB960C500A91AD6 /* RestaurantsListCollectionViewCell.swift in Sources */,
 				D65774F72AB9654100A91AD6 /* RestaurantVeganCollectionViewCell.swift in Sources */,
 				D65774A52AB4715300A91AD6 /* HomeViewController.swift in Sources */,
+				D65775002ABABE5D00A91AD6 /* FilterHeaderView.swift in Sources */,
 				D65774F22AB9621100A91AD6 /* RestaurantsListModel.swift in Sources */,
 				D65774F42AB9651A00A91AD6 /* VeganRestaurantModel.swift in Sources */,
 				D65774E12AB820B000A91AD6 /* HomeVC+Extensions.swift in Sources */,

@@ -21,6 +21,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return foodTopBannerMockData.count
         }
     }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         4
     }
@@ -48,8 +49,23 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             return cell
         }
-        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String
+     , at indexPath: IndexPath) -> UICollectionReusableView {
+            if kind == "Header" {
+                // this part is not implimented yet 
+                let header = self.collectionView.dequeueReusableSupplementaryView(ofKind: kind
+                , withReuseIdentifier:   FilterHeaderView.headerIdentifier, for: indexPath) as! FilterHeaderView
+//                header.delegate = self
+                return header
+            }else {
+                let footer = self.collectionView.dequeueReusableSupplementaryView(ofKind: kind
+                , withReuseIdentifier: DividerFooterView.footerIdentifier, for: indexPath) as! DividerFooterView
+                
+                return footer
+            }
+        }
 }
 
 //MARK: - Food Banner Section Compostional Layout
@@ -84,6 +100,16 @@ extension HomeViewController{
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         section.contentInsets =  NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0)
 
+        //animation
+        section.visibleItemsInvalidationHandler = { (items, offset, environment) in
+             items.forEach { item in
+             let distanceFromCenter = abs((item.frame.midX - offset.x) - environment.container.contentSize.width / 2.0)
+             let minScale: CGFloat = 0.8
+             let maxScale: CGFloat = 1.0
+             let scale = max(maxScale - (distanceFromCenter / environment.container.contentSize.width), minScale)
+             item.transform = CGAffineTransform(scaleX: scale, y: scale)
+             }
+        }
         return section
     }
 //MARK: - Food Category Section
@@ -123,6 +149,11 @@ extension HomeViewController{
             section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15
             , bottom: 10, trailing: 15)
             
+        section.boundarySupplementaryItems = [
+//            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top),
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom)
+            
+        ]
             return section
         }
 //MARK: - Vegan Restaurant
