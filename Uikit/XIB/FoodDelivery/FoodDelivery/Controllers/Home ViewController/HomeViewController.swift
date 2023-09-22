@@ -20,9 +20,14 @@ class HomeViewController: UIViewController{
         self.collectionView.register(UINib(nibName: "RestaurantsListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: RestaurantsListCollectionViewCell.identifier)
         self.collectionView.register(UINib(nibName: "RestaurantVeganCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: RestaurantVeganCollectionViewCell.identifier)
         //Header Footer
+        collectionView.register(RestaurantsHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: RestaurantsHeaderView.headerIdentifier)
         collectionView.register(DividerFooterView.self, forSupplementaryViewOfKind: "Footer", withReuseIdentifier: DividerFooterView.footerIdentifier)
         
         self.configureCompostionaLayout()
+    }
+    
+    @IBAction func tableViewButton(_sender: UIButton){
+        self.navigationController?.pushViewController(TableViewController(), animated: true)
     }
 }
 

@@ -54,10 +54,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String
      , at indexPath: IndexPath) -> UICollectionReusableView {
             if kind == "Header" {
-                // this part is not implimented yet 
                 let header = self.collectionView.dequeueReusableSupplementaryView(ofKind: kind
-                , withReuseIdentifier:   FilterHeaderView.headerIdentifier, for: indexPath) as! FilterHeaderView
-//                header.delegate = self
+                , withReuseIdentifier:   RestaurantsHeaderView.headerIdentifier, for: indexPath) as! RestaurantsHeaderView
                 return header
             }else {
                 let footer = self.collectionView.dequeueReusableSupplementaryView(ofKind: kind
@@ -150,9 +148,8 @@ extension HomeViewController{
             , bottom: 10, trailing: 15)
             
         section.boundarySupplementaryItems = [
-//            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top),
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Header", alignment: .top),
             .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Footer", alignment: .bottom)
-            
         ]
             return section
         }

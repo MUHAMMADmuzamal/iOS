@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSx-bJ-gdR">
-                    <rect key="frame" x="137.66666666666666" y="79" width="118" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compostional Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSx-bJ-gdR">
+                    <rect key="frame" x="20" y="79" width="161" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -35,17 +35,27 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC4-ON-veU">
+                    <rect key="frame" x="267" y="72" width="106" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Table View"/>
+                    <connections>
+                        <action selector="tableViewButtonWith_sender:" destination="-1" eventType="touchUpInside" id="2g7-Qt-a4k"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="GGE-Lb-cmN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3bu-8V-Rba"/>
-                <constraint firstItem="JSx-bJ-gdR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q7a-yL-EfA"/>
+                <constraint firstItem="JSx-bJ-gdR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5e5-jc-u83"/>
+                <constraint firstItem="mC4-ON-veU" firstAttribute="centerY" secondItem="JSx-bJ-gdR" secondAttribute="centerY" id="bVG-Oy-oEQ"/>
                 <constraint firstItem="JSx-bJ-gdR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="cxs-bn-Pjn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GGE-Lb-cmN" secondAttribute="bottom" id="gDM-ED-xeo"/>
                 <constraint firstItem="GGE-Lb-cmN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lde-oZ-RQc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GGE-Lb-cmN" secondAttribute="trailing" id="phR-7v-iHW"/>
                 <constraint firstItem="GGE-Lb-cmN" firstAttribute="top" secondItem="JSx-bJ-gdR" secondAttribute="bottom" constant="10" id="phZ-gE-BaU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mC4-ON-veU" secondAttribute="trailing" constant="20" id="vHE-fN-Z2I"/>
             </constraints>
             <point key="canvasLocation" x="83" y="20"/>
         </view>
