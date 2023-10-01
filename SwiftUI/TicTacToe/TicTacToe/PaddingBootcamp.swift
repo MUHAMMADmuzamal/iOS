@@ -29,13 +29,9 @@ struct PaddingAndSpacerBootcamp: View {
         }
         .padding()
         .padding(.vertical,10)
-        .background(
-            Color.white
-                .cornerRadius(10)
-                .shadow(color:.black.opacity(0.3),
-                        radius: 10,
-                        x:0, y:10)
-        )
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(color:.red.opacity(0.3),radius: 10,x:0, y:10)
         
 //        .background(Color.blue)
 //        .padding()
