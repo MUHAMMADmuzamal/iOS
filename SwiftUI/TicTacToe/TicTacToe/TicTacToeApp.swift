@@ -17,7 +17,7 @@ struct TicTacToeApp: App {
 //                    .tabItem {
 //                        Label("Journal", systemImage: "book")
 //                    }
-                TextBootcamp()
+                ButtonBootcamp()
                 
                 SettingsView()
                     .tabItem {
