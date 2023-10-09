@@ -7,13 +7,16 @@
 
 #include <iostream>
 #include <vector>
+#include "Arrays/Different-Questions-Explantaion"
 using namespace std;
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     vector<int> v;
     v.push_back(100);
     cout<<v[0];
     cout << "Hello, World!\n";
-    print()
+    print();
     return 0;
 }

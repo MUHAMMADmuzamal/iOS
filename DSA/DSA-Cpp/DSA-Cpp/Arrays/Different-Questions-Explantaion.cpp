@@ -6,6 +6,9 @@
 //
 
 #include <stdio.h>
+#include <iostream>
+using namespace std;
+
 
 //MARK: - Kth Smallest Element
 
@@ -68,7 +71,7 @@ class Solution {
 
  */
 
-class Solution{
+class Solution1{
   public:
     int minJumps(int arr[], int n){
         // Your code here
@@ -94,3 +97,7 @@ class Solution{
         return jumps;
     }
 };
+
+void print(){
+    cout<<"Hello from print";
+}

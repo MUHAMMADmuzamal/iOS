@@ -35,6 +35,8 @@ approaches.
  - using another array to store first negative values and  then positive.
  */
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 void reArrange(int arr[],int n){
       int low =0,high = n-1;
