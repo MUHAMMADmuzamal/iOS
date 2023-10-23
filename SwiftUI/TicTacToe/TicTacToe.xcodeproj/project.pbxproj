@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D6025FD82AB3669D00E6AE69 /* GradientsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */; };
 		D60B8AEC2AC48E300055D5FB /* PaddingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B8AEB2AC48E300055D5FB /* PaddingBootcamp.swift */; };
+		D616F5702AE6C3D900DB110C /* SheetsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616F56F2AE6C3D900DB110C /* SheetsBootcamp.swift */; };
 		D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F86B2AA9CCBC002F7193 /* SettingsView.swift */; };
 		D62209E92ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62209E82ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift */; };
 		D65774D02AB4B88000A91AD6 /* SystemIconBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774CF2AB4B88000A91AD6 /* SystemIconBootcamp.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsBootcamp.swift; sourceTree = "<group>"; };
 		D60B8AEB2AC48E300055D5FB /* PaddingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBootcamp.swift; sourceTree = "<group>"; };
+		D616F56F2AE6C3D900DB110C /* SheetsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetsBootcamp.swift; sourceTree = "<group>"; };
 		D617F86B2AA9CCBC002F7193 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D62209E82ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurvesOrTimingBootcamp.swift; sourceTree = "<group>"; };
 		D65774CF2AB4B88000A91AD6 /* SystemIconBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIconBootcamp.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				D67CC0342AD6FDCA008C156F /* AnimationBootcamp.swift */,
 				D62209E82ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift */,
 				D6E4A5BB2AE4324200F79153 /* TrasitionBootcamp.swift */,
+				D616F56F2AE6C3D900DB110C /* SheetsBootcamp.swift */,
 				D6F1BC852A9A209C004A2DDC /* Assets.xcassets */,
 				D6F1BC872A9A209C004A2DDC /* Preview Content */,
 			);
@@ -254,6 +257,7 @@
 				D6F1BC842A9A209A004A2DDC /* ContentView.swift in Sources */,
 				D65774D02AB4B88000A91AD6 /* SystemIconBootcamp.swift in Sources */,
 				D6753D8E2AD1B38B005953DC /* ExtractedBootcamp.swift in Sources */,
+				D616F5702AE6C3D900DB110C /* SheetsBootcamp.swift in Sources */,
 				D65774D22AB613E200A91AD6 /* ImagesBootcamp.swift in Sources */,
 				D6F1BC822A9A209A004A2DDC /* TicTacToeApp.swift in Sources */,
 				D6753D952AD45ECC005953DC /* ExtractSubViewsBootcamp.swift in Sources */,
